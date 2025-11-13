@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "Description" content="WDD 131-Dynamic Web Fundamentials, JT Pyle, place"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
+    
+    <title>WDD 131 – Dynamic Web Fundamentals – JT Pyle</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-small.css">
+    <script src="./scripts/getdates.js" type="module"></script>
+    <script src="scripts/calculateTemp.js" type="module"></script>
+</head>
+<body>
+ <header id="place-title"><h1><span>Omaha Nebraska</span></h1>
+ 
+ </header>
+
+ <main>
+     <picture id="Hero_img">
+         <source srcset="./images/place/omaha-nebraska-small.jpg" media="(max-width: 700px)">
+         <source srcset="./images/place/omaha-nebraska-medium.jpg" media="(max-width: 1200px)">
+         <img src="./images/place/omaha-nebraska-large.jpg" alt="Omaha Ne Skyline">
+        </picture>
+<section id="first_section" class="card">
+    <ul><h2>Data</h2></ul>
+    <ul>
+        Area: 142 square miles
+    </ul>
+    <ul>
+        Population: 486,051
+    </ul>
+    <ul>
+        State Capital: Lincoln
+    </ul>
+    <ul>
+        Top 3 Languages: English, Spanish, Omaha-Ponca
+    </ul>
+    <ul>
+        Currency: United States Dollar
+    </ul>
+    <ul>
+        Time Zone: Central Time Zone (UTC -6)
+    </ul>
+    <ul>
+        Calling code: +1 (Omaha uses 402 and 531 first three numbers)
+    </ul>
+    <ul>
+        Internet TLD: .Ne
+    </ul>
+</div>
+</section>
+<section id="second_section" class="card">
+<h2 class="weatherLine">
+    Weather 
+    <img id="weather_photo" alt="weather_photo">
+</h2>
+<ul>Average Temp: <span id="avg_temp">55</span></ul>
+<ul>Weather Condition: <span id="type">Sunny</span></ul>
+<ul>High: <span>70</span></ul>
+<ul>Low: <span id="low">40</span></ul>
+<ul><span id="emergency"></span></ul>
+
+</section>
+</main>
+<footer>
+    <p>  JT Pyle, Nebraska, USA<br>&copy;
+    <span id="currentyear"></span></p>
+    <p>Last Modified <span id="lastmodified"></span></p>
+</footer>
+</body>
+</html>
