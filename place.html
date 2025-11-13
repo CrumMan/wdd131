@@ -56,7 +56,10 @@
 <section id="second_section" class="card">
 <h2 class="weatherLine">
     Weather 
-    <img id="weather_photo" alt="weather_photo" loading="lazy">
+    <picture>
+        <source srcset="./images/weather/sunny.svg" media="(max-width: 700px)">
+        <img id="weather_photo" alt="weather_photo" loading="lazy">
+    </picture>
 </h2>
 <ul>Average Temp: <span id="avg_temp">55</span></ul>
 <ul>Weather Condition: <span id="type">Sunny</span></ul>
