@@ -15,9 +15,10 @@ switch (type) {
         weatherImg.src = './images/weather/cloudy.jpg';
         break;
     case 'snowy':
-        weatherImg.src = './images/weather/snowy.jpg' 
+        weatherImg.src = './images/weather/snowy.jpg' ;
+        break;
     case 'tornado warning':
-        weatherImg.src = './images/weather/tornado.jpg'
+        weatherImg.src = './images/weather/tornado.jpg';
         break;
     default:
         weatherImg.src = './images/weather/default.jpg';
