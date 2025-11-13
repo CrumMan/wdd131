@@ -26,7 +26,18 @@ if(!weatherImg.src){
     }
 }
 
-const windspeed = document.getElementById('Windspeed')
-const temprature = document.getElementById('avgTemp').innerText
-const windchillselect= document.getElementById('Windchill')
-windchillselect.innerText = Math.round(35.74 + 0.6215 * temprature - 35.75 * Math.pow(windspeed, 0.16) + 0.4275 * temprature * Math.pow(windspeed, 0.16));
+const windspeed = parseFloat(document.getElementById('Windspeed').textContent);
+const temperature = parseFloat(document.getElementById('avgTemp').textContent);
+
+const windchillElem = document.getElementById('Windchill');
+if (temperature <= 50 && windspeed >= 3) {
+    const windChill =
+        35.74 +
+        0.6215 * temperature -
+        35.75 * Math.pow(windspeed, 0.16) +
+        0.4275 * temperature * Math.pow(windspeed, 0.16);
+
+    windchillElem.textContent = Math.round(windChill) + "°F";
+} else {
+    windchillElem.textContent = "N/A";
+}
