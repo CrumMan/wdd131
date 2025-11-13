@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name = "Description" content="WDD 131-Dynamic Web Fundamentials, JT Pyle, place"
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
     
     <title>WDD 131 – Dynamic Web Fundamentals – JT Pyle</title>
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-small.css">
-    <script src="./scripts/getdates.js" type="module"></script>
-    <script src="scripts/calculateTemp.js" type="module"></script>
+    <script src="./scripts/getdates.js" type="module" defer></script>
+    <script src="scripts/calculateTemp.js" type="module" defer></script>
 </head>
 <body>
  <header id="place-title"><h1><span>Omaha Nebraska</span></h1>
@@ -21,9 +21,9 @@
 
  <main>
      <picture id="Hero_img">
-         <source srcset="./images/place/omaha-nebraska-small.jpg" media="(max-width: 700px)">
-         <source srcset="./images/place/omaha-nebraska-medium.jpg" media="(max-width: 1200px)">
-         <img src="./images/place/omaha-nebraska-large.jpg" alt="Omaha Ne Skyline">
+         <source srcset="./images/place/omaha-nebraska-small.webp" media="(max-width: 700px)" >
+         <source srcset="./images/place/omaha-nebraska-medium.webp" media="(max-width: 1200px)">
+         <img src="./images/place/omaha-nebraska-large.webp" alt="Omaha Ne Skyline" loading="lazy">
         </picture>
 <section id="first_section" class="card">
     <ul><h2>Data</h2></ul>
@@ -56,7 +56,7 @@
 <section id="second_section" class="card">
 <h2 class="weatherLine">
     Weather 
-    <img id="weather_photo" alt="weather_photo">
+    <img id="weather_photo" alt="weather_photo" loading="lazy">
 </h2>
 <ul>Average Temp: <span id="avg_temp">55</span></ul>
 <ul>Weather Condition: <span id="type">Sunny</span></ul>
