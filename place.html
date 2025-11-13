@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-small.css">
     <script src="./scripts/getdates.js" type="module" defer></script>
-    <script src="scripts/calculateTemp.js" type="module" defer></script>
+    <script src="scripts/weather_manipulation.js" type="module" defer></script>
 </head>
 <body>
  <header id="place-title"><h1><span>Omaha Nebraska</span></h1>
@@ -61,10 +61,10 @@
         <img id="weather_photo" alt="weather_photo" loading="lazy">
     </picture>
 </h2>
-<ul>Average Temp: <span id="avg_temp">55</span></ul>
+<ul>Temprature: <span id="avgTemp">55</span> °F</ul>
 <ul>Weather Condition: <span id="type">Sunny</span></ul>
-<ul>High: <span>70</span></ul>
-<ul>Low: <span id="low">40</span></ul>
+<ul>Windchill: <span id="Windchill">40</span> °F</ul>
+<ul>Wind: <span id="WindSpeed">5</span> mph</ul>
 <ul><span id="emergency"></span></ul>
 
 </section>
