@@ -1,5 +1,9 @@
 /* https://coolors.co/335c67-fff3b0-e09f3e */
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
 body{
     font-family: "Playfair Display", serif;
     font-display: swap;
