@@ -104,14 +104,15 @@ main{
 
 .figure{
     background-color: #5bc0be;
-    padding: 15px;
+    padding: 25px;
     border-radius: 10PX;
     justify-self: center;
     color: #0B132B;
-    max-width: 350px;
-    width: 30%;
-}
-figure img{
-    width: 90%;
 }
 
+.figure img{
+    max-width: 325px;
+}
+.purple{
+    color: #2E0057;
+}
