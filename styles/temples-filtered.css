@@ -112,6 +112,7 @@ main{
 
 .figure img{
     max-width: 325px;
+    max-height: 203px;
 }
 .purple{
     color: #2E0057;
