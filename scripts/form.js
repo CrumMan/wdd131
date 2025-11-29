@@ -9,3 +9,12 @@ products.forEach(product => {
     
 });
 
+document.querySelector('form').addEventListener("submit",function(event) {
+    event.preventDefault();
+    let reviewCount = localStorage.getItem('reviewCount')|| 0
+    reviewCount = parseInt(reviewCount) + 1
+    localStorage.setItem('reviewCount', reviewCount)
+    alert(`Thank You! You have completed ${reviewCount} review(s).`)
+
+    document.querySelector('form').reset();
+})
