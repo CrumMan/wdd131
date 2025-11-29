@@ -1,0 +1,101 @@
+/* https://coolors.co/0b132b-7d82b8-f4e04d-5bc0be */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+       font-family: "Playfair Display", serif; 
+       text-align: center;
+       background-color: #0B132B;
+       color: #f4e04d;
+}
+header, footer{
+    background-color: #5bc0be;
+    color: #0B132B;
+    padding: 1rem;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #0B132B;
+    text-decoration: none;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.overall {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+}
+.overall input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overall label {
+    font-size: 2rem;
+    color: #7d82b8; /* default star color (grayish) */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.overall > label {
+	display: flex;
+	align-items: center;
+	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+}
+.overall input:checked ~ label {
+	color: gold;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.figure{
+    background-color: #5bc0be;
+    padding: 25px;
+    border-radius: 10PX;
+    justify-self: center;
+    color: #0B132B;
+}
+
+.figure img{
+    width: 325px;
+    height: 203px;
+}
+.purple{
+    color: #2E0057;
+}
+
+form{
+    text-align: left;
+    justify-content: center;
+    width:50%;
+    background-color: #03256c;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+button{
+    display: block;
+    margin:20px auto;
+}
+span{
+    font-size: .8rem;
+}

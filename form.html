@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <title>WDD 131 – form – JT Pyle</title>
-    <link rel="stylesheet" href="styles/temples-filtered.css">
-    <link rel="stylesheet" href="styles/temples-large-filtered.css"  media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="./scripts/form.js" type="module"></script>
     <script src="./scripts/getdates.js" type="module"></script>
 
 </head>
@@ -22,9 +22,53 @@
     </nav>
  </header>
  <main>
-    <h1>Home</h1>
     <div class="container">
-   
+   <form method="get" action="review.html">
+    <label for="product_name">Product Name:<br></label>
+    <select name="product_name" id="product_name" required>
+
+    </select>
+    <div>
+        <legend for="overall">Overall Rating</legend>
+        <div class="overall">
+         <input type="radio" id="fivestar" name="overall" value="5" required><label for="fivestar" aria-label="5 stars">★</label>
+        <input type="radio" id="fourstar" name="overall" value="4"><label for="fourstar" aria-label="4 stars">★</label>
+        <input type="radio" id="threestar" name="overall" value="3"><label for="threestar" aria-label="3 stars">★</label>
+        <input type="radio" id="twostar" name="overall" value="2"><label for="twostar" aria-label="2 stars">★</label>
+        <input type="radio" id="onestar" name="overall" value="1"><label for="onestar" aria-label="1 star">★</label>
+</div>
+</div>
+        <label for="date"><br>Date of Installation<br></label>
+        <input name="date" type="date" id="date" required></input>
+
+    <div class="features_checkbox"
+        <label for="usefulFeatures"><br>What features did you find useful to the product? (check all that apply)<br></label>
+
+        <label class="usefulFeatures" type="checkbox">
+            <input type="checkbox" id="usefulFeature1" name="usefulFeatures" value="Durability">Durability</input>
+        </label><br>
+
+        <label class="usefulFeatures" type="checkbox">
+            <input type="checkbox" id="usefulFeature2" name="usefulFeatures" value="Ease_of_Use">Ease of Use</input>
+        </label><br>
+
+        <label class="usefulFeatures" type="checkbox">
+            <input type="checkbox" id="usefulFeature3" name="usefulFeatures" value="Performance">Performance</input>
+        </label><br>
+
+        <label class="usefulFeatures" type="checkbox">
+            <input type="checkbox" id="usefulFeature4" name="usefulFeatures" value="Design">Design</input>
+        </label><br>
+        
+    </div>
+    <label for="writtenReview"><br>Written Review: <span>(optional)</span><br></label>
+    <textarea id="writtenReview" rows="5" cols="40"></textarea>
+
+    <label class="usefulFeatures" for="userName"><br>Your Name: <span>(optional)</span><br>    </label>
+    <input type="text" id="userName" name="userName">
+    <br>
+    <button id="submit" type="submit">Post Review</button>
+   </form>
     </div>
  </main>
 <footer>
