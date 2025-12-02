@@ -120,6 +120,11 @@ main{
 }
 .post_user{
     margin: auto;
+    background-color: #e27865;
+    padding: 20px;
+    border-radius: 20px;
+    height: fit-content;
+    width: 90%;
 }
 .post{
     background-color: #89538D;
