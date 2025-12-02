@@ -11,4 +11,111 @@ hamburger.addEventListener("click", ()=> {
 navLink.forEach(n => n.addEventListener("click", ()=> {
     hamburger.classList.remove('active')
     navMenu.classList.remove('active')
+   
 }))
+    
+
+document.addEventListener("DOMContentLoaded", loadAndCreate)
+
+function loadAndCreate(){
+        const posts = document.querySelectorAll(".post")
+        
+        posts.forEach((post,index) => {
+            const form = post.querySelector("form.comment")
+            const textarea = form.querySelector("textarea")
+            const commentList = post.querySelector(".comment-list")
+            let savedComments
+
+            if (localStorage.getItem("post_" + index)){
+                 savedComments = JSON.parse(localStorage.getItem("post_" + index))
+            } else {savedComments = []}
+            savedComments.forEach(c => addCommentToList(c,commentList))
+        
+            form.addEventListener("submit", (event) => { 
+                event.preventDefault()
+                const user = localStorage.getItem("user")
+                if(user){
+                    const textContent = textarea.value.trim()
+                    if(!textContent) return
+                    const text = user + ": " + textContent
+                    addCommentToList(text, commentList)
+                    savedComments.push(text)
+                    localStorage.setItem("post_"+index, JSON.stringify(savedComments))
+
+                    textarea.value = ""
+                }
+                else{
+                    textarea.value = ""
+                }
+            })
+        })
+}
+
+function addCommentToList(text, elementList){
+    const p= document.createElement("p")
+    p.textContent = text
+    p.classList.add("user-comment")
+    elementList.appendChild(p)
+}
+
+function createUser(){
+const user = localStorage.getItem("user")
+if (user){
+document.querySelector('.post_user').innerHTML=`<h2>Welcome ${user}!</h2>`
+}
+else {
+        const post_user_form = document.querySelector('.post_user')
+        post_user_form.innerHTML = 
+        `<form method='get' action='#' class='createUser'>
+        <label for='user'>Create User<br>Name:<br></label>
+        <textarea id="user" rows="1" cols="40"></textarea>
+        <br>
+        <button>Submit</button>
+        </form>`
+        const form = post_user_form.querySelector('form.createUser')
+        
+        form.addEventListener("submit", (event) =>{
+            event.preventDefault();
+            
+            const username = post_user_form.querySelector('#user').value.trim()
+            if(!username) return
+            localStorage.setItem("user", username)
+            post_user_form.innerHTML = `<h2>Welcome ${username}!</h2>`
+        })
+    }
+}
+createUser()
+
+function makeAvertizements(){
+    const avertizements = ["./images/avertizement1.webp","./images/avertizement2.webp", "./images/avertizement3.webp", "./images/avertizement4.webp", "./images/avertizement5.webp"]
+    const avertizementDoc = document.querySelector('.action-left')
+    avertizements.forEach(avertizement => {
+        avertizementDoc.innerHTML += `<figure class="avertizementGap"> <img src= "${avertizement}" loading="lazy"> </figure>`
+    })
+}
+makeAvertizements()
+
+function createRightAction(){
+const friends = ["John Murphy", "Larry the Cable Guy", "Old Saint Nick", "Richard Hughes", "Denzel Washington"]
+const suggestedFriends = ["Fabio Lounges", "Jason Vorhees", "Vicky Beans", "Pablo Escobar", "Careem Jeffries", "Lana Del Ray"]
+
+const friendDoc = document.querySelector(".friends")
+const suggestedFriendsDoc = document.querySelector(".suggested_friends")
+
+makeFriendList(friends,friendDoc)
+makeFriendList(suggestedFriends, suggestedFriendsDoc)
+
+friendDoc
+
+}
+function makeFriendList(friendArray, content){
+    friendArray.forEach(friend => {
+        content.innerHTML += `<ul>${friend}</ul>`;
+    })
+}
+createRightAction()
+
+document.getElementById("logout").addEventListener("click", () => {
+    localStorage.removeItem("user")
+    location.reload()
+})

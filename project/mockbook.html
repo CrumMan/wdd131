@@ -11,7 +11,7 @@
     
     <title>WDD 131 – Mockbook – JT Pyle</title>
     <link rel="stylesheet" href="styles/mockbook.css">
-    <link rel="stylesheet" href="styles/mockbook.css"  media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/mockbook-large.css">
     <script src="../scripts/getdates.js" type="module"></script>
     <script src="./scripts/mockbook.js" type="module"></script>
 
@@ -21,11 +21,9 @@
     <nav class="navbar">
     <a href="#" class=" nav-branding"><h1>Mockbook</h1></a>
         <ul class="nav-menu">
-            <li class="nav-item"><a href="../index.html" id="Home" class="nav-link">Home</a></li>
-            <li  class="nav-item"><a href="#" id="Mockbook" class="nav-link">Mockbook</a></li>
+            <li class="nav-item"><a href="#" id="Home" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="siteplan.html" id="New" class="nav-link">SitePlan</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" id="Large" >Large</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" id="Small">Small</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" id="logout" >Logout </a></li>
         </ul>
         <div class="hamburger">
             <span class="bar"></span>
@@ -34,54 +32,146 @@
         </div>
     </nav>
 </header>
-    <h1>Site Plan</h1>
-<!-- Site Domain Name: MockBook Optional domain availability: mockbook.net
--->
-<div class="post">
-    <h2>Site Domain Name</h2>
-    <p>MockBook</p>
-    <p><span>Domain availability:</span> mockbook.net</p>
-</div>
-  <!-- Site Purpose: To create a social media platform frontend that will look and feel like the backend developed result. -->
-<div class="post">
-    <h2>Site Purpose:</h2>
-    <p>To create a social media platform frontend that will look and feel like the backend developed result.</p>
-</div>
-<!-- Senarios: 
- -The site provides another social media app for a user to interact with that does not have the addictive qualities of facebook
--Users are encouraged to manage the amount of time spent on mockbook and to only post once per day. Its why its a social media that is less addicting.
--->
-<div class="post">
-    <li>
-        <h2>Senarios</h2>
-        <ul>The site provides another social media app for a user to interact with that does not have the addictive qualities of facebook</ul>
-        <ul>Users are encouraged to manage the amount of time spent on mockbook and to only post once per day. Its why its a social media that is less addicting.</ul>
-    </li>
-</div>
-<!-- Color schema:  FFEA00-d3bccc-89538D-e27865-4a306d https://coolors.co/FFEA00-d3bccc-89538D-e27865-4a306d -->
-<div class="post">
-    <h2>Color Schema:</h2>
-    <p class="colorSchema"><span class="color1">FFEA00</span>-<span class="color2">d3bccc</span>-<span class="color3">89538D</span>-<span class="color4">e27865</span>-<span class="color5">4a306d</span></p>
- </div>
- <div class="post">
-    <h2>Typography</h2>
-    <p>Font: <a href="https://fonts.google.com/specimen/Playfair+Display">Playfair Display</a></p>
- </div>
- <div class="post">
-    <h2> Wireframes</h2>
-    <figure class="plan_figure">
-        <figcaption>
-            Large View
-        </figcaption>
-        <img src="./images/large-view.jpg" alt="largeview_wireframe">
-    </figure>
-    <figure class="plan_figure">
-        <figcaption>
-            Small View
-        </figcaption>
-        <img src="./images/small_view.webp" alt="smallview_wireframe">
-    </figure>
- </div>
+<main>
+    <div class="action-right">
+        <div>
+            <li>Friends:</li>
+            <ul class="friends"></ul>
+        </div>
+        
+        <div >
+            <li>Suggested Friends:
+                <ul class="suggested_friends"></ul>
+            </li>
+        </div>
+    </div>
+    <div class="action-left">
+        <div class="avertizements">
+            
+        </div>
+        
+    </div>
+    <div class="action-middle">
+        <h1>Home</h1>
+        <div class="post_user"></div>
+        <div class="post">
+            <h3>Post</h3>
+            <div class="post_words">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, impedit perferendis, necessitatibus autem voluptatem, quam nostrum obcaecati fuga consectetur ipsam natus distinctio ab expedita quas. Aliquam, quia soluta. Consectetur, iste.
+            </p>
+        </div>
+            <div class="post_comment">
+                <form method="get" action="" class="comment">
+                    <label for="postComment1"><br>Comment:</span><br></label>
+                <textarea id="postComment1" rows="1" cols="30" ></textarea> <br>
+                <button> Submit </button>
+                </form>
+                <div class="comment-list"></div>
+            </div>
+        </div>
+
+        <div class="post">
+            <h3>Post</h3>
+            <div class="post_words">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, impedit perferendis, necessitatibus autem voluptatem, quam nostrum obcaecati fuga consectetur ipsam natus distinctio ab expedita quas. Aliquam, quia soluta. Consectetur, iste.
+            </p>
+        </div>
+            <div class="post_comment">
+                <form method="get" action="" class="comment">
+                    <label for="postComment2"><br>Comment:</span><br></label>
+                <textarea id="postComment2" rows="1" cols="30"></textarea><br>
+                <button> Submit </button>
+                </form>
+                <div class="comment-list"></div>
+
+            </div>
+        </div>
+
+
+        <div class="post">
+        <h3>Post With Image</h3>
+        
+        <div class="post_words">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, impedit perferendis, necessitatibus autem voluptatem, quam nostrum obcaecati fuga consectetur ipsam natus distinctio ab expedita quas. Aliquam, quia soluta. Consectetur, iste.
+            </p>
+        </div>
+
+        <div>
+        <figure class="post_image">
+            <img src="./images/random-small.webp" alt="post image" loading="lazy">
+            <figcaption>Image</figcaption>
+        </figure>
+        </div>
+            <div class="post_comment">
+                <form method="get" action="" class="comment">
+                    <label for="postComment3"><br>Comment:</span><br></label>
+                <textarea id="postComment3" rows="1" cols="30"></textarea><br>
+                <button> Submit </button>
+                </form>
+                <div class="comment-list"></div>
+
+            </div>
+        </div>
+
+
+        <div class="post">
+            <h3>Post</h3>
+            <div class="post_words">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta a blanditiis non suscipit, possimus earum explicabo maxime perferendis aliquam pariatur tempore sapiente rem porro laboriosam facilis voluptates, omnis atque autem.</p>
+            </div>
+            <div class="post_comment">
+                <form method="get" action="" class="comment">
+                    <label for="postComment4"><br>Comment:</span><br></label>
+                <textarea id="postComment4" rows="1" cols="30"></textarea><br>
+                <button> Submit </button>
+                </form>
+                <div class="comment-list"></div>
+
+            </div>
+            
+        </div>
+
+        <div class="post">
+            <h3>Post</h3>
+            <div class="post_words">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, impedit perferendis, necessitatibus autem voluptatem, quam nostrum obcaecati fuga consectetur ipsam natus distinctio ab expedita quas. Aliquam, quia soluta. Consectetur, iste.
+            </p>
+        </div>
+            <div class="post_comment">
+                <form method="get" action="" class="comment">
+                    <label for="postComment5"><br>Comment:</span><br></label>
+                <textarea id="postComment5" rows="1" cols="30"></textarea><br>
+                <button> Submit </button>
+                </form>
+                <div class="comment-list"></div>
+
+            </div>
+            
+        </div>
+        <div class="post">
+            <h3>Post</h3>
+            <div class="post_words">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, impedit perferendis, necessitatibus autem voluptatem, quam nostrum obcaecati fuga consectetur ipsam natus distinctio ab expedita quas. Aliquam, quia soluta. Consectetur, iste.
+            </p>
+        </div>
+            <div class="post_comment">
+                <form method="get" action="" class="comment">
+                    <label for="postComment6"><br>Comment:</span><br></label>
+                <textarea id="postComment6" rows="1" cols="30"></textarea><br>
+                <button> Submit </button>
+                </form>
+                <div class="comment-list"></div>
+
+            </div>
+
+        </div>
+    </div>
+</main>
 <footer>
     <p>JT Pyle, Nebraska, USA<br>&copy;
     <span id="currentyear"></span></p>

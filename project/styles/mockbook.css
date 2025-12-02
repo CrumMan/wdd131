@@ -15,6 +15,7 @@ header, footer{
     color: #FFEA00;
     padding: 1rem;
 }
+
 li{
     list-style: none;
 }
@@ -107,18 +108,46 @@ main{
     gap: 25px;
 }
 
+.action-left{
+    display: none;
+    background-color: #89538D;
+    border-radius: 10px;
+}
+.action-right{
+    display: none;
+    background-color: #89538D;
+    border-radius: 10px;
+}
 .post{
     background-color: #89538D;
     padding: 25px;
-    border-radius: 10PX;
+    border-radius: 10px;
     justify-self: center;
     color: #FFEA00;
     margin: 20px;
     width: 50%;
     max-width: 700px;
-    min-width: 200;
+    min-width: 300px;
 }
 
+
+.post_words{
+    background-color: #e27865;
+    padding: 15px;
+    color: #050202;
+    border-radius: 10px;
+}
+
+.post_comment{
+    background-color: #d3bccc;
+    color: #050202;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.post_comment label{
+    text-align: left;
+}
 
 /* for site plan */
 .colorSchema{
@@ -126,7 +155,11 @@ main{
     padding: 10px;
 }
 
-/* https://coolors.co/FFEA00-d3bccc-89538D-e27865-4a306d */
+/* https://coolors.co/FFEA00-d3bccc-89538D-e27865-050202 */
+
+.post_image{
+    margin: 10px 0;
+}
 
 .plan_figure{ 
     width: 100%;
@@ -153,7 +186,7 @@ color: #d3bccc;
     color: #e27865;
 }
 .color5{
-   color:#4a306d; 
-   background-color: #FFEA00;
+   color:#050202; 
+   background-color: #e27865;
    padding: 5px;
 }
