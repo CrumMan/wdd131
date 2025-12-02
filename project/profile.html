@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "Description" content="WDD 131-Dynamic Web Fundamentials, JT Pyle, Index"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <title>WDD 131 – Mockbook – JT Pyle</title>
+    <link rel="stylesheet" href="styles/mockbook.css">
+    <link rel="stylesheet" href="styles/mockbook-large.css">
+    <script src="../scripts/getdates.js" type="module"></script>
+    <script src="./scripts/profile.js" type="module"></script>
+
+</head>
+<body>
+<header>
+    <nav class="navbar">
+    <a href="mockbook.html" class=" nav-branding"><h1>Mockbook</h1></a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="mockbook.html" id="Home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="siteplan.html" id="New" class="nav-link">SitePlan</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" id="loginLogoutToggle"></a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="action-middle">
+        <div class="post_user">
+            <form method='get' action='#' class='createUser'>
+                <label for='user'>Create User<br>Name:<br></label>
+                <textarea id="user" rows="1" cols="40"></textarea>
+                <br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>JT Pyle, Nebraska, USA<br>&copy;
+    <span id="currentyear"></span></p>
+    <p>Last Modified <span id="lastmodified"></span></p>
+</footer>
+</body>
+</html>

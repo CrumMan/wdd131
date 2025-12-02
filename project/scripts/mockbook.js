@@ -64,24 +64,7 @@ if (user){
 document.querySelector('.post_user').innerHTML=`<h2>Welcome ${user}!</h2>`
 }
 else {
-        const post_user_form = document.querySelector('.post_user')
-        post_user_form.innerHTML = 
-        `<form method='get' action='#' class='createUser'>
-        <label for='user'>Create User<br>Name:<br></label>
-        <textarea id="user" rows="1" cols="40"></textarea>
-        <br>
-        <button>Submit</button>
-        </form>`
-        const form = post_user_form.querySelector('form.createUser')
-        
-        form.addEventListener("submit", (event) =>{
-            event.preventDefault();
-            
-            const username = post_user_form.querySelector('#user').value.trim()
-            if(!username) return
-            localStorage.setItem("user", username)
-            post_user_form.innerHTML = `<h2>Welcome ${username}!</h2>`
-        })
+       document.querySelector('.post_user').innerHTML = "<a href= \"profile.html\">Please click here to login and comment </a>"
     }
 }
 createUser()
@@ -114,8 +97,25 @@ function makeFriendList(friendArray, content){
     })
 }
 createRightAction()
+function LoginOrLogout(){
+    const user = localStorage.getItem("user")
+    const text = document.getElementById("loginLogoutToggle")
 
-document.getElementById("logout").addEventListener("click", () => {
-    localStorage.removeItem("user")
-    location.reload()
-})
+    if(user){
+        text.innerHTML= `<a id="LogoutToggle" href=./profile.html>Logout</a>`
+
+    }
+    else {
+        text.innerHTML = `<a id="LoginToggle" href=./profile.html>Login</a>`
+    }
+
+    const logout = document.querySelector("#LogoutToggle")
+    if (logout){
+
+        logout.addEventListener("click", () => {
+        localStorage.removeItem("user")
+        location.reload()
+        })
+    }
+}
+LoginOrLogout()

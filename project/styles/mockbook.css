@@ -118,6 +118,9 @@ main{
     background-color: #89538D;
     border-radius: 10px;
 }
+.post_user{
+    margin: auto;
+}
 .post{
     background-color: #89538D;
     padding: 25px;
