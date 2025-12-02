@@ -14,6 +14,8 @@ else {
             if(!username) return
             localStorage.setItem("user", username)
             post_user_form.innerHTML = `<h2>Welcome ${username}!</h2>`
+
+            window.location.href = "mockbook.html"
         })
     }
 }
