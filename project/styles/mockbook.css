@@ -193,3 +193,18 @@ color: #d3bccc;
    background-color: #e27865;
    padding: 5px;
 }
+/* friends html */
+.friends_list, .suggested_friends{
+    background-color: #89538D;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.friendEl{
+    background-color: #e27865;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    color: #050202;
+}

@@ -80,7 +80,7 @@ makeAvertizements()
 
 function createRightAction(){
 const friends = ["John Murphy", "Larry the Cable Guy", "Old Saint Nick", "Richard Hughes", "Denzel Washington"]
-const suggestedFriends = ["Fabio Lounges", "Jason Vorhees", "Vicky Beans", "Pablo Escobar", "Careem Jeffries", "Lana Del Ray"]
+const suggestedFriends = ["Fabio Lounges", "Jason Vorhees", "Vicky Beans", "Pablo Escobar", "Hakeem Jeffries", "Lana Del Ray"]
 
 const friendDoc = document.querySelector(".friends")
 const suggestedFriendsDoc = document.querySelector(".suggested_friends")
