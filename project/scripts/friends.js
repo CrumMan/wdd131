@@ -12,7 +12,7 @@ makeFriendList(suggestedFriends, suggestedFriendsDoc)
 function makeFriendList(friendArray, content){
     const html = friendArray.map(friend => {
         const filename = friend.trim().toLowerCase().replace(/ /g, "")
-        return `<li class="friendEl">${friend}<br><img class="friendElImg"  loading="lazy" alt="${friend}" src="./images/${filename}.webp" width="125" height="175"></li>`;
+        return `<li class="friendEl">${friend}<br><img class="friendElImg"  loading="lazy" alt="${friend}" src="./images/${filename}.webp" width="125" height="120"></li>`;
     }).join('')
     content.innerHTML = html
 }
