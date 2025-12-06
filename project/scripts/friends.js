@@ -3,7 +3,7 @@ const friends = ["John Murphy", "Larry the Cable Guy", "Old Saint Nick", "Richar
 const suggestedFriends = ["Fabio Lounges", "Jason Vorhees", "Vicky Beans", "Pablo Escobar", "Hakeem Jeffries", "Lana Del Ray"]
 
 const friendDoc = document.querySelector(".friends")
-const suggestedFriendsDoc = document.querySelector(".suggested_friends ul")
+const suggestedFriendsDoc = document.querySelector(".suggested_friends")
 
 makeFriendList(friends,friendDoc)
 makeFriendList(suggestedFriends, suggestedFriendsDoc)
