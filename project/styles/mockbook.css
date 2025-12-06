@@ -212,4 +212,6 @@ color: #d3bccc;
     border-radius: 20px;
     padding: 5px;
     color: #050202;
+    max-width: 125px;
+    max-height: 175px;
 }

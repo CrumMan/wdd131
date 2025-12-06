@@ -12,9 +12,9 @@ friendDoc
 
 }
 function makeFriendList(friendArray, content){
-    friendArray.forEach(friend => {
+    friendArray.map(friend => {
         const filename = friend.trim().toLowerCase().replace(/ /g, "")
-        content.innerHTML += `<ul class="friendEl">${friend}<br><img loading="lazy" src="./images/${filename}.webp"></ul>`;
+        return `<li class="friendEl">${friend}<br><img loading="lazy" src="./images/${filename}.webp"></li>`;
     })
 }
 createRightAction()
