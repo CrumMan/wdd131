@@ -8,8 +8,6 @@ const suggestedFriendsDoc = document.querySelector(".suggested_friends ul")
 makeFriendList(friends,friendDoc)
 makeFriendList(suggestedFriends, suggestedFriendsDoc)
 
-friendDoc
-
 }
 function makeFriendList(friendArray, content){
     const html = friendArray.map(friend => {
